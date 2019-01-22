@@ -34,7 +34,7 @@ spring bean的生命周期
     
     16、容器初始化成功，执行业务逻辑
     
-    17、执行DisposibleBean的destory方法
+    17、容器关闭，执行DisposibleBean的destory方法
     
     18、调用<bean>的destory-method方法
     
