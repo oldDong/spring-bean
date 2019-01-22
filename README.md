@@ -58,7 +58,7 @@ spring bean的生命周期
             spring hook函数，管理bean工厂内的所有BeanDefinition（未实例化），可以随心所欲地修改属性
             
         BeanPostProcessor
-            对bean属性进行更改，bean实例化后，init-method前后
+            对bean属性进行更改，bean初始化前后
             在<bean/>的init-method之前执行postProcessBeforeInitialization
             在<bean/>的init-method之后执行postProcessAfterInitialization
             
