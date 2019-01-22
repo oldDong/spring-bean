@@ -36,6 +36,7 @@ public class MyInstantiationAwareBeanPostProcessor extends InstantiationAwareBea
 
     /**
      * 接口方法，实例化Bean之后调用
+     *
      * @param bean
      * @param beanName
      * @return
@@ -48,7 +49,8 @@ public class MyInstantiationAwareBeanPostProcessor extends InstantiationAwareBea
     }
 
     /**
-     * 接口方法，设置某个属性时调用
+     * 接口方法，为bean注入属性之前调用
+     *
      * @param pvs
      * @param pds
      * @param bean

@@ -74,12 +74,12 @@ public class Person implements BeanFactoryAware, BeanNameAware, InitializingBean
     /**
      * 这是BeanNameAware接口方法
      *
-     * @param s
+     * @param beanName
      */
     @Override
-    public void setBeanName(String s) {
+    public void setBeanName(String beanName) {
         System.out.println("【BeanNameAware接口】调用BeanNameAware.setBeanName()");
-        this.beanName = s;
+        this.beanName = beanName;
     }
 
     /**
