@@ -41,7 +41,28 @@ spring bean的生命周期
     Bean完整生命周期用到的组件
     
     1、Bean级别的接口
-        BeanFactory、BeanNameAware、InitializingBean、DisposableBean
-        
+        BeanFactoryAware
+            设置BeanFactory
+            
+        BeanNameAware
+            设置BeanName
+            
+        InitializingBean
+            在bean属性设置完成后调用（beanFactory，beanName）
+            
+        DisposableBean
+            容器关闭后，调用destory()，在<bean/>的destory-method之前被调用
+            
     2、容器全局后处理器接口
-        BeanFactoryPostProcessor、BeanPostProcessor、InstantiationAwareBeanPostProcessor
+        BeanFactoryPostProcessor
+            spring hook函数，管理bean工厂内的所有BeanDefinition（未实例化），可以随心所欲地修改属性
+            
+        BeanPostProcessor
+            对bean属性进行更改，
+            在<bean/>的init-method之前执行postProcessBeforeInitialization
+            在<bean/>的init-method之后执行postProcessAfterInitialization
+            
+        InstantiationAwareBeanPostProcessor
+            在bean实例化之前调用postProcessBeforeInstantiation
+            在bean实例化之后调用postProcessAfterInstantiation
+            
